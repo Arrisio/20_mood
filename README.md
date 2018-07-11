@@ -1,6 +1,6 @@
 # Site for the Mood
 
-[TODO. There will be project description]
+Each time the user enters [the site](https://Arrisio.github.io/20_mood/) gives one funny phrase from the list. A few cool phrases are already in the repository. 
 
 # Project Goals
 

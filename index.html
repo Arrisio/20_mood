@@ -1,8 +1,14 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Настроение</title>
-  <script id="quotes_json" type="application/json">
+<html lang="ru">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Настроение</title>
+    <script id="quotes_json" type="application/json">
     [
       {
         "phrase": "Кукурузные хлопья - теперь без асбеста!",
@@ -12,15 +18,72 @@
         "phrase": "Собираюсь жить вечно, пока всё идёт нормально"
       },
       {
-        "phrase": "Вывеска над кафе — '\u003cМы открылись\u003e'. Что-то не так. Где же '\u003c/Мы открылись\u003e'?"
+        "phrase": "Если ты будешь усердно работать по 8 часов в день,\n то обязательно станешь боссом и начнешь работать по 12"
       },
       {
-        "phrase": "Если ты будешь усердно работать по 8 часов в день, то обязательно станешь боссом и начнешь работать по 12"
+        "phrase": "Не стоит ждать вдохновения, за ним надо гоняться с дубинкой.",
+        "signature": "Джек Лондон"
+      },
+      {
+        "phrase": "Храни свои слова надежнее монет.\nДослушай до конца - потом давай совет.\nТебе при двух ушах язык один достался.\nЧтоб выслушал двоих и дать один совет.",
+        "signature": "Омар Хайям"
+      },
+      {
+        "phrase": "Дурак, сознавшийся, что он дурак, есть уже не дурак.",
+        "signature": "Федор М. Достоевский "
+      },
+      {
+        "phrase": "То, что глупо говорить, следует петь.",
+        "signature": "Вольтер"
+      },
+      {
+        "phrase": "Следуй голосу ума, а не гнева.",
+        "signature": "Уильям Шекспир"
+      },
+      {
+        "phrase": "Целься выше. Может, в цель ты и не попадёшь,\nно уж наверняка не отстрелишь собственные ноги.",
+        "signature": "@Лоис Макмастер Буджолд"
       }
+
     ]
-  </script>
+    </script>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Custom CSS -->
+    <link href="css/stylish-portfolio.min.css" rel="stylesheet">
 </head>
-<body>
-  <h1>asd</h1>
-</body>
+  <body id="page-top">
+    <!-- Header -->
+    <header class="masthead d-flex">
+      <div class="container my-auto text-right">
+        <div>
+          <h2 class="mb-2" id="phrase"></h2>
+        </div>
+        <h3 class="mb-5", style="font-style: italic" id="signature"></h3>
+      </div>
+      <div class="overlay"></div>
+    </header>
+
+    <!-- Footer -->
+    <footer class="footer text-center" style="position: absolute;bottom: 0;width: 100%; background-color: transparent">
+      <div class="container">
+        <p class="text-muted small mb-0">Copyright &copy; Arrisio4Devmanorg 2018</p>
+      </div>
+    </footer>
+
+    <script>
+      var quates = JSON.parse(document.getElementById("quotes_json").innerText)
+      var random_id = Math.floor(Math.random()*quates.length)
+
+      document.getElementById("phrase").innerText = quates[random_id].phrase
+      document.getElementById("signature").innerText = quates[random_id].signature || ""
+    </script>
+
+  </body>
+
 </html>
