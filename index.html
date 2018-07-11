@@ -78,10 +78,10 @@
 
     <script>
       var quates = JSON.parse(document.getElementById("quotes_json").innerText)
-      var random_id = Math.floor(Math.random()*quates.length)
+      var random_quate_id = Math.floor(Math.random()*quates.length)
 
-      document.getElementById("phrase").innerText = quates[random_id].phrase
-      document.getElementById("signature").innerText = quates[random_id].signature || ""
+      document.getElementById("phrase").innerText = quates[random_quate_id].phrase
+      document.getElementById("signature").innerText = quates[random_quate_id].signature || ""
     </script>
 
   </body>
